@@ -33,7 +33,7 @@ $hint = "";
 if ($q !== "") {
     $q = strtolower($q);
     $len=strlen($q);
-    $q = properText($q);
+    //$q = properText($q);
     foreach($a as $name) {
         if (stristr($q, substr($name, 4, $len))) {
             if ($hint === "") {
