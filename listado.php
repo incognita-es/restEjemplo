@@ -1,6 +1,9 @@
 <?php
 
 // Listado de algunos paises
+// <option value="ESP">Spain</option>
+// <option value="2" selected="selected">test2</option>
+// <option value="3">test3</option>
 $a[] = "Andorra";
 $a[] = "Alemania";
 $a[] = "B&eacute;lgica";
@@ -31,7 +34,7 @@ if ($q !== "") {
     foreach($a as $name) {
         if (stristr($q, substr($name, 0, $len))) {
             if ($hint === "") {
-                $hint = $name;
+                $hint = "<option value=".$name.">test3</option>";
             } else {
                 $hint .= ", $name";
             }
