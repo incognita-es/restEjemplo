@@ -3,7 +3,7 @@
 <script>
 function muestraPais(str) {
     if (str.length == 0) {
-        document.getElementById("Pais").innerHTML = "";
+        document.getElementById("Listado").innerHTML = "";
         return;
     } else {
         var xmlhttp = new XMLHttpRequest();
@@ -24,8 +24,8 @@ function muestraPais(str) {
 <form>
 Nombre: <input type="text" onkeyup="muestraPais(this.value)">
 </form>
-<p>Listado de paises posibles: <span id="Pais"></span></p>
-    <br><br>
+<p>Listado de paises posibles:</p>
+    <br>
     <select id="Listado"></select>
 </body>
 </html> 
