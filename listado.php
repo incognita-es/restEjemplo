@@ -49,10 +49,4 @@ if ($q !== ""){
 // Output "no suggestion" if no hint was found or output correct values
 echo $hint === "" ? "<option value=0 selected>".$q.", No coincide con ning&uacute;n pais</option>" : $hint;
 
-function properText($str){
-    $str = mb_convert_encoding($str, "HTML-ENTITIES", "UTF-8");
-    $str = preg_replace('[a-zA-Z áéíóúÁÉÍÓÚñÑ.]+',htmlentities('${1}'),$str);
-    return($str); 
-}
-
 ?> 
