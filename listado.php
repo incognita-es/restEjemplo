@@ -32,10 +32,10 @@ $hint = "";
 // lookup all hints from array if $q is different from ""
 if ($q !== "") {
     $q = strtolower($q);
-    $q = properText($q);
     $len=strlen($q);
+    $q = properText($q);
     foreach($a as $name) {
-        if (stristr($q, substr(properText($name), 4, $len))) {
+        if (stristr($q, substr($name, 4, $len))) {
             if ($hint === "") {
                 $hint = "<option value=".$name."</option>";
             } else {
