@@ -35,7 +35,7 @@ if ($q !== "") {
     $q = strtolower($q);
     $len=strlen($q);
     foreach($a as $name) {
-        if (stristr($q, substr($name, 0, $len))) {
+        if (stristr($q, substr($name, 4, $len))) {
             if ($hint === "") {
                 $hint = "<option value=".$name."</option>";
             } else {
