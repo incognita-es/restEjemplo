@@ -5,11 +5,14 @@
 // <option value="2" selected="selected">test2</option>
 // <option value="3">test3</option>
 $a[] = "And>Andorra";
+$a[] = "Alb>Albania";
 $a[] = "Deu>Alemania";
 $a[] = "Bel>B&eacute;lgica";
 $a[] = "Cze>Chequia";
 $a[] = "Den>Dinamarca";
 $a[] = "Esp>Espa&ntilde;a";
+$a[] = "Est>Estonia";
+$a[] = "Esl>Eslovenia";
 $a[] = "Fin>Finlandia";
 $a[] = "Georgia";
 $a[] = "Hungr&iacute;a";
@@ -36,7 +39,7 @@ if ($q !== "") {
             if ($hint === "") {
                 $hint = "<option value=".$name."</option>";
             } else {
-                $hint .= ", $name";
+                $hint .= "<option value=".$name."</option>";
             }
         }
     }
