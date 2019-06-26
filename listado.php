@@ -41,6 +41,8 @@ if ($q !== "") {
             } else {
                 $hint .= "<option value=".$name."</option>";
             }
+        } else {
+            $hint .= $name;
         }
     }
 }
