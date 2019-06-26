@@ -38,9 +38,9 @@ if ($q !== ""){
     foreach($a as $name){
         if (stristr($q, substr($name, 4, $len))){
             if ($hint === ""){
-                $hint = "<option value=0 selected>Seleccione un pais</option><option value=".$name."</option>";
+                $hint = "<option value=0 selected>Seleccione un pais</option><option value=".$name.$q."</option>";
             } else {
-                $hint .= "<option value=".$name."</option>";
+                $hint .= "<option value=".$name.$q."</option>";
             }
         }
     }
