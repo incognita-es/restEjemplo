@@ -38,7 +38,7 @@ if ($q !== ""){
     foreach($a as $name){
         if (stristr($q, substr($name, 4, $len))){
             if ($hint === ""){
-                $hint = "<option value=".$name."</option>";
+                $hint = "<option value=0 selected>Seleccione un pais</option><option value=".$name."</option>";
             } else {
                 $hint .= "<option value=".$name."</option>";
             }
@@ -47,7 +47,7 @@ if ($q !== ""){
 }
 
 // Output "no suggestion" if no hint was found or output correct values
-echo $hint === "" ? "No se ha introducido un pais con el comienzo de esa letra" : $hint;
+echo $hint === "" ? "<option value=0 selected>No coincide con ning&uacute;n pais</option>" : $hint;
 
 function properText($str){
     $str = mb_convert_encoding($str, "HTML-ENTITIES", "UTF-8");
