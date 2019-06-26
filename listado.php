@@ -47,7 +47,7 @@ if ($q !== ""){
 }
 
 // Output "no suggestion" if no hint was found or output correct values
-echo $hint === "" ? "<option value=0 selected>No coincide con ning&uacute;n pais</option>" : $hint;
+echo $hint === "" ? "<option value=0 selected>".$q.", No coincide con ning&uacute;n pais</option>" : $hint;
 
 function properText($str){
     $str = mb_convert_encoding($str, "HTML-ENTITIES", "UTF-8");
