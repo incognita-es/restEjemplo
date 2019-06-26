@@ -4,13 +4,13 @@
 // <option value="ESP">Spain</option>
 // <option value="2" selected="selected">test2</option>
 // <option value="3">test3</option>
-$a[] = "Andorra";
-$a[] = "Alemania";
-$a[] = "B&eacute;lgica";
-$a[] = "Chipre";
-$a[] = "Dinamarca";
-$a[] = "Espa&ntilde;a";
-$a[] = "Finlandia";
+$a[] = "And>Andorra";
+$a[] = "Deu>Alemania";
+$a[] = "Bel>B&eacute;lgica";
+$a[] = "Cze>Chequia";
+$a[] = "Den>Dinamarca";
+$a[] = "Esp>Espa&ntilde;a";
+$a[] = "Fin>Finlandia";
 $a[] = "Georgia";
 $a[] = "Hungr&iacute;a";
 $a[] = "Italia";
@@ -34,7 +34,7 @@ if ($q !== "") {
     foreach($a as $name) {
         if (stristr($q, substr($name, 0, $len))) {
             if ($hint === "") {
-                $hint = "<option value=".$name.">test3</option>";
+                $hint = "<option value=".$name."</option>";
             } else {
                 $hint .= ", $name";
             }
