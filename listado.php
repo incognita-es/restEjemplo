@@ -1,16 +1,14 @@
 <?php
 
-// Listado de algunos paises
-// <option value="ESP">Spain</option>
-// <option value="2" selected="selected">test2</option>
-// <option value="3">test3</option>
 $a[] = "And>Andorra";
 $a[] = "Alb>Albania";
 $a[] = "Deu>Alemania";
 $a[] = "Bel>B&eacute;lgica";
+$a[] = "Bel>Bélgica";
 $a[] = "Cze>Chequia";
 $a[] = "Den>Dinamarca";
 $a[] = "Esp>Espa&ntilde;a";
+$a[] = "Esp>España";
 $a[] = "Est>Estonia";
 $a[] = "Esl>Eslovenia";
 $a[] = "Fin>Finlandia";
