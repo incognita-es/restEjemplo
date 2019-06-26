@@ -13,16 +13,17 @@ $a[] = "Esp>España";
 $a[] = "Est>Estonia";
 $a[] = "Esl>Eslovenia";
 $a[] = "Fin>Finlandia";
-$a[] = "Georgia";
-$a[] = "Hungr&iacute;a";
-$a[] = "Italia";
-$a[] = "Irlanda";
-$a[] = "Islandia";
-$a[] = "Jap&oacute;n";
-$a[] = "Kazajist&aacute;n";
-$a[] = "Letonia";
-$a[] = "Malta";
-$a[] = "Noruega";
+$a[] = "Geo>Georgia";
+$a[] = "GBR>Reino Unido";
+$a[] = "Hun>Hungr&iacute;a";
+$a[] = "Ita>Italia";
+$a[] = "Ire>Irlanda";
+$a[] = "Ice>Islandia";
+$a[] = "Jap>Jap&oacute;n";
+$a[] = "Kaz>Kazajist&aacute;n";
+$a[] = "Let>Letonia";
+$a[] = "Mlt>Malta";
+$a[] = "Nor>Noruega";
 
 // get the q parameter from URL
 $q = $_REQUEST["q"];
