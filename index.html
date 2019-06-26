@@ -12,10 +12,9 @@ function muestraPais(str) {
                 document.getElementById("Listado").innerHTML = this.responseText;
             }
         };
-        window.alert(str);
-        window.alert(utf8_encode(str));
         xmlhttp.open("GET", "listado.php?q=" + utf8_encode(str), true);
         xmlhttp.send();
+        window.alert(utf8_encode(str));
     }
 }
 </script>
