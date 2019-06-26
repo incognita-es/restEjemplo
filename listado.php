@@ -40,7 +40,7 @@ if ($q !== ""){
             if ($hint === ""){
                 $hint = "<option value=0 selected>Seleccione un pais</option><option value=".$name.$q."</option>";
             } else {
-                $hint .= "<option value=".$name.$q."</option>";
+                $hint .= "<option value=".$name.utf8_decode($q)."</option>";
             }
         }
     }
