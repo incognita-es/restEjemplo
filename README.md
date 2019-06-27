@@ -1,8 +1,7 @@
 # restEjemplo
 Formulario ejemplo
 
-REST web-service to search country by 3 character ISO code or 2 character ISO code or country name
+La URL para el web service es http://services.groupkt.com/country/search?text={text to search}
 
-This will search the input string every where in all 2 ISO codes and country name. partial input is also allowed
-
-The url for this web service is http://services.groupkt.com/country/search?text={text to search} for example
+Web-Service REST para buscar paises introduciendo los 2 o 3 primeros carácteres.
+Según se van introduciendo, hará una búsqueda en el listado de paises configurados
