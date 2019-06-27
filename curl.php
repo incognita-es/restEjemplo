@@ -14,12 +14,12 @@ if (isset($decoded->RestResponse->status) && $decoded->RestResponse->status == '
     die('error occured: ' . $decoded->RestResponse->errormessage);
 }
 echo "JSON_DECODE:<br>";
+var_export($decoded->RestResponse);
 echo "Nombre: ".$decoded->RestResponse;
-//var_export($decoded->RestResponse);
-echo "Nombre1: ".$decoded->RestResponse->result;
-echo "Nombre2: ".$decoded->RestResponse->result->name;
-echo "Nombre3: ".$decoded->RestResponse->name;
-echo "Nombre4: ".$decoded->RestResponse->messages;
-echo "Nombre5: ".$decoded->messages;
-echo "Nombre6: ".$decoded->name;
+//echo "Nombre1: ".$decoded->RestResponse->result;
+//echo "Nombre2: ".$decoded->RestResponse->result->name;
+//echo "Nombre3: ".$decoded->RestResponse->name;
+//echo "Nombre4: ".$decoded->RestResponse->messages;
+//echo "Nombre5: ".$decoded->messages;
+//echo "Nombre6: ".$decoded->name;
 ?>
