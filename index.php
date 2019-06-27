@@ -1,65 +1,58 @@
 <html>
-<head>
-<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-</head>
-<body>
-
-<script>
-	function muestraPais(cadena)
-	{
-		if (!soloNombre(cadena))
-		{
-			if (cadena.length == 0)
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	</head>
+	<body>
+		<script>
+			function muestraPais(cadena)		
 			{
-				document.getElementById("Listado").innerHTML = "";
-				return;
-			}
-			else
-			{
-				var xmlhttp = new XMLHttpRequest();
-				xmlhttp.onreadystatechange = function()
+				if (!soloNombre(cadena))
 				{
-					if (this.readyState == 4 && this.status == 200)
+					if (cadena.length == 0)
 					{
-						document.getElementById("Listado").innerHTML = this.responseText;
+						document.getElementById("Listado").innerHTML = "";
+						return;
 					}
-				};
-				xmlhttp.open("GET", "listado.php?entrada=" + unescape(cadena), true);
-				xmlhttp.send();
+					else
+					{
+						var xmlhttp = new XMLHttpRequest();
+						xmlhttp.onreadystatechange = function()
+						{
+							if (this.readyState == 4 && this.status == 200)
+							{
+								document.getElementById("Listado").innerHTML = this.responseText;
+							}
+						};
+						xmlhttp.open("GET", "listado.php?entrada=" + unescape(cadena), true);
+						xmlhttp.send();
+					}
+				}
+				else
+				{
+					window.alert("Aviso: Debe introducir caracteres en el nombre del pais");
+				}
 			}
-		}
-		else
-		{
-			window.alert("Aviso: Debe introducir caracteres en el nombre del pais");
-		}
-	}
+				
+			function soloNombre(myString)
+			{
+				return /\d/.test(myString);
+			}			
 	
-	function soloNombre(myString)
-	{
-		return /\d/.test(myString);
-	}
-	
-	function seleccion()
-	{
-		var x = document.getElementById("Listado").value;
-		document.getElementById("Resultados").innerHTML = "Has seleccionado el c&oacute;digo: " + x;
-	}
-</script>
-	    	    
-<p><b>Comience a escribir el nombre de un pais:</b></p>
-	
-<form>
-	First name:<br>
-	<input type="text" name="firstname">
-	<br>
-	Last name:<br>
-	<input type="text" name="lastname">
-</form>
-	
-<form>Nombre: <input type="text" onkeyup="muestraPais(this.value)"></form>
-<p>Listado de paises posibles:</p>
-<select id="Listado" onchange="seleccion()"></select>
-<br>
-<p id="Resultados"></p>
-<br>
-</body></html> 
+			function seleccion()
+			{
+				var x = document.getElementById("Listado").value;
+				document.getElementById("Resultados").innerHTML = "Has seleccionado el c&oacute;digo: " + x;
+			}
+		</script>
+		
+		<p><b>Comience a escribir el nombre de un pais:</b></p>
+		<form>
+			Nombre: <input type="text" onkeyup="muestraPais(this.value)">
+		</form>
+		<p>Listado de paises posibles:</p>
+		<select id="Listado" onchange="seleccion()">
+		</select>
+		<br>
+		<p id="Resultados"></p>
+	</body>
+</html> 
