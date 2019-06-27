@@ -6,9 +6,10 @@
 		<script>
 			
 			function refreshData(){
+				var x = document.getElementById("Listado").value;
 				var display = document.getElementById("ContenidosREST");
 				var xmlhttp = new XMLHttpRequest();
-				xmlhttp.open("GET", "curl5.php");
+				xmlhttp.open("GET", "curl5.php?entrada=" + x, true);
 				xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 				xmlhttp.send();
 				xmlhttp.onreadystatechange = function() {
