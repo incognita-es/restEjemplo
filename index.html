@@ -63,12 +63,12 @@
 		</script>
 		
 		<p><b>Comience a escribir el nombre de un pais y comenzar&aacute; la b&uacute;squeda:</b></p>
+		<form>
+			Nombre del pais: <input type="text" onkeyup="muestraPais(this.value)">
+		</form>
 		<p>Puede escribir los primeros caracteres, los resultados se insertan en el desplegable inferior.</p>
 		<p>Cuantos m&aacute;s caracteres introduzca, el filtro ser&aacute; mayor</p>
-		<form>
-			Nombre: <input type="text" onkeyup="muestraPais(this.value)">
-		</form>
-		<p>Listado de paises posibles:</p>
+		<b>Listado de paises posibles:</b>
 		<select id="Listado" onchange="capturaRest()">
 		</select>
 		<br><br>
