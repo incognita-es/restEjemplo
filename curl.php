@@ -13,19 +13,14 @@ echo "Respuesta origen del servidor:<br>".$result."<br><br><br>";
 //if (isset($decoded->RestResponse->status) && $decoded->RestResponse->status == 'ERROR') {
 //    die('error occured: ' . $decoded->RestResponse->errormessage);
 //}
-echo "JSON_DECODE:<br>";
+echo "Respuesta JSON_DECODE:<br>";
 //var_export($decoded->RestResponse);
 //echo "Nombre: ".$decoded->RestResponse;
 
-$array = json_decode($result, true);
-foreach($array as $key=>$value)
-{
-    echo "Salida: ".$key . "=>" . $value . "<br>";
-}
 
-//$array = json_decode($result, true);
+$array = json_decode($result, true);
 foreach ($array as $emp) {
-  echo $emp['Name']."<br/>";
+  echo "SI ". $emp['Name']."<br/>";
 }
 
 
@@ -37,11 +32,4 @@ foreach ($jsonIterator as $key => $val) {
         echo "Key: $key => Valor: $val<br>";
     }
 }
-
-//echo "Nombre1: ".$decoded->RestResponse->result;
-//echo "Nombre2: ".$decoded->RestResponse->result->name;
-//echo "Nombre3: ".$decoded->RestResponse->name;
-//echo "Nombre4: ".$decoded->RestResponse->messages;
-//echo "Nombre5: ".$decoded->messages;
-//echo "Nombre6: ".$decoded->name;
 ?>
