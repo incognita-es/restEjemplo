@@ -69,5 +69,6 @@
 		</select>
 		<br>
 		<p id="Resultados"></p>
+		<input type="button" id="sample" value="click" onclick="getOutput()"/>
 	</body>
 </html> 
