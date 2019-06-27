@@ -5,6 +5,21 @@
 	<body>
 		<script>
 			
+			function refreshData(){
+				var display = document.getElementById("ContenidosREST");
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("GET", "curl5.php");
+				xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				xmlhttp.send();
+				xmlhttp.onreadystatechange = function() {
+					if (this.readyState === 4 && this.status === 200) {
+						display.innerHTML = this.responseText;
+					} else {
+						display.innerHTML = "Loading...";
+					};
+				}
+			}
+			
 			function accion()
 			{
 				$.ajax({
@@ -91,5 +106,7 @@
 		<p id="Resultados"></p>
 		<input type="button" id="sample1" value="click1" onclick="getOutput()"/>
 		<input type="button" id="sample2" value="click2" onclick="accion()"/>
+		<button onclick=refreshData()>Say Hello</button>
+		<div id="ContenidosREST" />
 	</body>
 </html> 
