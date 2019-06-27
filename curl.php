@@ -20,7 +20,7 @@ echo "Respuesta JSON_DECODE:<br>";
 $jsonIterator = new RecursiveIteratorIterator(new RecursiveArrayIterator(json_decode($result, TRUE)), RecursiveIteratorIterator::SELF_FIRST);
 foreach ($jsonIterator as $key => $val) {
     if(is_array($val)) {
-        echo "Key -> $key:<br><br>";
+        echo "Key -> $key:<br>";
     } else {
         echo "Key: $key => Valor: $val<br>";
     }
