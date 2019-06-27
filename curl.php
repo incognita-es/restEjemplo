@@ -15,5 +15,5 @@ if (isset($decoded->RestResponse->status) && $decoded->RestResponse->status == '
 }
 echo "JSON_DECODE:<br>";
 var_export($decoded->RestResponse);
-echo $decoded->RestResponse;
+echo $decoded->RestResponse->name;
 ?>
