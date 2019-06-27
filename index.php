@@ -2,13 +2,6 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     
-<?php
-    
-    function buscaCurl2($direccion){
-        die("HOOOOLA");
-    }
-?>
-    
 <script>
 function muestraPais(cadena) {
     if (!soloNombre(cadena)) {
@@ -35,8 +28,8 @@ function soloNombre(myString) {
 }
     
 function seleccion() {
-    var phpadd = <?php buscaCurl2("http:sisisisi");?>;
-    window.alert(phpadd);
+    //var phpadd = <?php buscaCurl2("http:sisisisi");?>;
+    //window.alert(phpadd);
     var x = document.getElementById("Listado").value;
     document.getElementById("Resultados").innerHTML = "Has seleccionado el c&oacute;digo: " + x;
 }
