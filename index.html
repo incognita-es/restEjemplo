@@ -4,8 +4,7 @@
     
 <script>
 function muestraPais(cadena) {
-    if (soloNombre(cadena)) {
-        window.alert("Entra");
+    if (!soloNombre(cadena)) {
         if (cadena.length == 0) {
             document.getElementById("Listado").innerHTML = "";
             return;
@@ -20,7 +19,7 @@ function muestraPais(cadena) {
             xmlhttp.send();
         }
     } else {
-        window.alert("No entro");
+        window.alert("El nombre no puede contener d&iacute;gitos");
     }
 }
     
