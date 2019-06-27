@@ -25,5 +25,10 @@ if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') 
     die('error occured: ' . $decoded->response->errormessage);
 }
 echo 'response ok!';
+
+echo $curl_response;
+
+print_r($decoded);
+
 var_export($decoded->response);
 ?>
