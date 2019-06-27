@@ -20,7 +20,7 @@ echo "JSON_DECODE:<br>";
 $array = json_decode($result, true);
 foreach($array as $key=>$value)
 {
-    echo $key . "=>" . $value . "<br>";
+    echo "Salida: ".$key . "=>" . $value . "<br>";
 }
 
 
