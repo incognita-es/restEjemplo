@@ -22,7 +22,7 @@ foreach ($jsonIterator as $key => $val) {
     if(is_array($val)) {
         echo "Key -> $key:<br>";
     } else {
-        echo "Key: $key => Valor: $val<br>";
+        echo " &nbsp;&nbsp;&nbsp;&nbsp;Key: $key => Valor: $val<br>";
     }
 }
 ?>
