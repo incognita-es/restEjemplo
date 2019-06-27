@@ -47,12 +47,12 @@ $resultado = "";
 if ($entrada !== ""){
     $entrada = strtolower($entrada);
     $len=strlen($entrada);
-    foreach($listaPaises as $name){
-        if (stristr($entrada, substr($name, 4, $len))){
+    foreach($listaPaises as $pais){
+        if (stristr($entrada, substr($pais, 4, $len))){
             if ($resultado === ""){
-                $resultado = "<option value=0 selected>Seleccione un pais</option><option value=".$name."</option>";
+                $resultado = "<option value=0 selected>Seleccione un pais</option><option value=".$pais."</option>";
             } else {
-                $resultado .= "<option value=".$name.utf8_decode($entrada)."</option>";
+                $resultado .= "<option value=".$pais."</option>";
             }
         }
     }
