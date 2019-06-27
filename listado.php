@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
 
+// Array de paises
 $a[] = "And>Andorra";
 $a[] = "Alb>Albania";
 $a[] = "Deu>Alemania";
@@ -38,20 +39,18 @@ $a[] = "Ury>Uruguay";
 $a[] = "Yem>Yemen";
 $a[] = "Zmb>Zambia";
 
-// get the q parameter from URL
-$q = $_REQUEST["q"];
-
+//Leemos la entrada del pais
+$entrada = $_REQUEST["entrada"];
 $hint = "";
 
-// lookup all hints from array if $q is different from ""
-if ($q !== ""){
-    $q = strtolower($q);
-    $len=strlen($q);
-    //$q = properText($q);
+// Buscamos la entrada dentro del array
+if ($entrada !== ""){
+    $entrada = strtolower($entrada);
+    $len=strlen($entrada);
     foreach($a as $name){
-        if (stristr($q, substr($name, 4, $len))){
+        if (stristr($entrada, substr($name, 4, $len))){
             if ($hint === ""){
-                $hint = "<option value=0 selected>Seleccione un pais</option><option value=".$name.$q."</option>";
+                $hint = "<option value=0 selected>Seleccione un pais</option><option value=".$name."</option>";
             } else {
                 $hint .= "<option value=".$name.utf8_decode($q)."</option>";
             }
@@ -60,6 +59,6 @@ if ($q !== ""){
 }
 
 // Output "no suggestion" if no hint was found or output correct values
-echo $hint === "" ? "<option value=0 selected>".$q.", No coincide con ning&uacute;n pais</option>" : $hint;
+echo $hint === "" ? "<option value=0 selected>".$entrada.", No coincide con ning&uacute;n pais configurado.</option>" : $hint;
 
 ?> 
