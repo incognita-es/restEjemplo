@@ -1,32 +1,41 @@
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    
 <script>
-function muestraPais(str) {
-    if (str.length == 0) {
-        document.getElementById("Listado").innerHTML = "";
-        return;
+function muestraPais(cadena) {
+    if (soloNombre(cadena)) {
+        window.alert("Entra");
+        if (cadena.length == 0) {
+            document.getElementById("Listado").innerHTML = "";
+            return;
+        } else {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("Listado").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "listado.php?q=" + unescape(cadena), true);
+            xmlhttp.send();
+        }
     } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("Listado").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "listado.php?q=" + unescape(str), true);
-        xmlhttp.send();
+        window.alert("No entro");
     }
+}
+    
+function soloNombre(myString) {
+    return /\d/.test(myString);
 }
 </script>
 </head>
+    
 <body>
-
-<p><b>Comienza a escribir el nombre de un pais :</b></p>
-<form>
-Nombre: <input type="text" onkeyup="muestraPais(this.value)">
-</form>
-<p>Listado de paises posibles:</p>
-    <br>
+    <p><b>Comienza a escribir el nombre de un pais :</b></p>
+    <form>
+        Nombre: <input type="text" onkeyup="muestraPais(this.value)">
+    </form>
+    <p>Listado de paises posibles:</p>
     <select id="Listado"></select>
 </body>
 </html> 
