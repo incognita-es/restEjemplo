@@ -26,6 +26,11 @@ function muestraPais(cadena) {
 function soloNombre(myString) {
     return /\d/.test(myString);
 }
+    
+function seleccion() {
+    var x = document.getElementById("Listado").value;
+    document.getElementById("Resultados").innerHTML = "Has seleccionado: " + x;
+}
 </script>
 </head>
     
@@ -35,6 +40,9 @@ function soloNombre(myString) {
         Nombre: <input type="text" onkeyup="muestraPais(this.value)">
     </form>
     <p>Listado de paises posibles:</p>
-    <select id="Listado"></select>
+    <select id="Listado" onchange="seleccion()></select>
+    <br>
+    <p id="Resultados"></p>
+
 </body>
 </html> 
