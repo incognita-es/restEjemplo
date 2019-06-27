@@ -68,6 +68,6 @@
 		</select>
 		<br>
 		<p id="Resultados"></p>
-		<input type="button" id="sample" value="click" onclick="sam_click()"/>
+		<input type="button" id="sample" value="click" onclick="getOutput()"/>
 	</body>
 </html> 
