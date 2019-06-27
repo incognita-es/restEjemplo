@@ -46,6 +46,15 @@ function seleccion() {
     <p id="Resultados"></p>
     <br>
     <button type="button" onclick="alert('Buscar en REST')">Buscar</button>
+        $('.button').click(function() {
 
-    </body>
-</html> 
+    $.ajax({
+        type: "POST",
+        url: "some.php",
+        data: { name: "John" }
+        }).done(function( msg ) {
+        alert( "Data Saved: " + msg );
+        });    
+    });
+
+</body></html> 
