@@ -65,11 +65,11 @@
 		<p><b>Comience a escribir el nombre de un pais y comenzar&aacute; la b&uacute;squeda:</b></p>
 		<form>
 			Nombre del pais: <input type="text" onkeyup="muestraPais(this.value)">
-			<p><h4>Puede escribir los primeros caracteres, los resultados se insertan en el desplegable inferior.</h4></p>
-			<p><h4>Cuantos m&aacute;s caracteres introduzca, el filtro ser&aacute; mayor</h4></p>
+			<p><h6>Puede escribir los primeros caracteres, los resultados se insertan en el desplegable inferior.</h6></p>
+			<p><h6>Cuantos m&aacute;s caracteres introduzca, el filtro ser&aacute; mayor</h6></p>
 		</form>
 		Listado de paises posibles:
-		<select id="Listado" onchange="capturaRest()">
+		<select id="Listado" onchange="capturaRest()" size=4>
 		</select>
 		<br><br>
 		<div id="ContenidosREST" style="background-color:lightblue"/>
