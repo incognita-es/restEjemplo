@@ -103,11 +103,7 @@
 		<p>Listado de paises posibles:</p>
 		<select id="Listado" onchange="refreshData()">
 		</select>
-		<br>
-		<p id="Resultados"></p>
-		<input type="button" id="sample1" value="click1" onclick="getOutput()"/>
-		<input type="button" id="sample2" value="click2" onclick="accion()"/>
-		<button onclick=refreshData()>Say Hello</button>
+		<br><br>
 		<div id="ContenidosREST" />
 	</body>
 </html> 
