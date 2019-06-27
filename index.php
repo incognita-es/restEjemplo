@@ -28,6 +28,7 @@ function soloNombre(myString) {
 }
     
 function seleccion() {
+    <?php echo date('l, F jS, Y'); ?>
     var x = document.getElementById("Listado").value;
     document.getElementById("Resultados").innerHTML = "Has seleccionado el c&oacute;digo: " + x;
 }
@@ -42,7 +43,6 @@ function seleccion() {
     <p>Listado de paises posibles:</p>
     <select id="Listado" onchange="seleccion()"></select>
     <br>
-    <?php echo date('l, F jS, Y'); ?>
     <p id="Resultados"></p>
 
 </body>
