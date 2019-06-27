@@ -10,14 +10,16 @@
 				window.alert("Entro ACCION");
 				$.ajax({
 					type:'POST', //aqui puede ser igual get
-					url: 'curl.php',//aqui va tu direccion donde esta tu funcion php
+					url: 'curl2.php',//aqui va tu direccion donde esta tu funcion php
 					data: {id:1,otrovalor:'valor'},//aqui tus datos
 					success:function(data)
 					{
+						$('#output').html(response.responseText);
 						//lo que devuelve tu archivo mifuncion.php
 					},
 					error:function(data)
 					{
+						$('#output').html('Bummer: there was an error!');
 						//lo que devuelve si falla tu archivo mifuncion.php
 					}
 				});
@@ -27,7 +29,7 @@
 			{
 				window.alert("Entro GETOUT");
 				$.ajax({
-					url:'curl.php',
+					url:'curl2.php',
 					complete: function (response)
 					{
 						$('#output').html(response.responseText);
