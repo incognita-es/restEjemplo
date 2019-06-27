@@ -28,7 +28,6 @@ function soloNombre(myString) {
 }
     
 function seleccion() {
-    <?php echo date('l, F jS, Y'); ?>
     var x = document.getElementById("Listado").value;
     document.getElementById("Resultados").innerHTML = "Has seleccionado el c&oacute;digo: " + x;
 }
