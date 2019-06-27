@@ -17,13 +17,6 @@ echo "Respuesta JSON_DECODE:<br>";
 //var_export($decoded->RestResponse);
 //echo "Nombre: ".$decoded->RestResponse;
 
-
-$array = json_decode($result, true);
-foreach ($array as $emp) {
-  echo "SI ". $emp['Name']."<br/>";
-}
-
-
 $jsonIterator = new RecursiveIteratorIterator(new RecursiveArrayIterator(json_decode($result, TRUE)), RecursiveIteratorIterator::SELF_FIRST);
 foreach ($jsonIterator as $key => $val) {
     if(is_array($val)) {
