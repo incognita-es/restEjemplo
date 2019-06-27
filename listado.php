@@ -6,6 +6,7 @@ $a[] = "And>Andorra";
 $a[] = "Alb>Albania";
 $a[] = "Deu>Alemania";
 $a[] = "Bel>B&eacute;lgica";
+$a[] = "Bel>Bélgica";
 $a[] = "Brb>Barbados";
 $a[] = "Cze>Chequia";
 $a[] = "Chl>Chile";
