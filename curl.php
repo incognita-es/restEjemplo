@@ -13,7 +13,7 @@ $decoded = json_decode($result);
 if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
     die('error occured: ' . $decoded->response->errormessage);
 }
-echo "Respuesta correcta<br><br>";
+echo "Respuesta correcta:<br><br>";
 var_export($decoded->RestResponse);
 echo $decoded->RestResponse;
 ?>
