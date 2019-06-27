@@ -62,5 +62,4 @@
 <br>
 <p id="Resultados"></p>
 <br>
-<input type="button" id="sample" value="click" onclick="sam_click()"/>
 </body></html> 
