@@ -7,6 +7,7 @@
 			
 			function getOutput()
 			{
+				window.alert("Entro");
 				$.ajax({url:'myAjax.php',complete: function (response)
 					{
 						$('#output').html(response.responseText);
