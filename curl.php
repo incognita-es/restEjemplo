@@ -9,17 +9,27 @@ $result=curl_exec($cSession);
 curl_close($cSession);
 echo "Respuesta del servidor:<br>".$result."<br><br>";
 
-$decoded = json_decode($result);
-if (isset($decoded->RestResponse->status) && $decoded->RestResponse->status == 'ERROR') {
-    die('error occured: ' . $decoded->RestResponse->errormessage);
+//$decoded = json_decode($result);
+//if (isset($decoded->RestResponse->status) && $decoded->RestResponse->status == 'ERROR') {
+//    die('error occured: ' . $decoded->RestResponse->errormessage);
+//}
+//echo "JSON_DECODE:<br>";
+//var_export($decoded->RestResponse);
+//echo "Nombre: ".$decoded->RestResponse;
+
+$jsonIterator = new RecursiveIteratorIterator(new RecursiveArrayIterator(json_decode($result, TRUE)), RecursiveIteratorIterator::SELF_FIRST);
+foreach ($jsonIterator as $key => $val) {
+    if(is_array($val)) {
+        echo "$key:\n";
+    } else {
+        echo "$key => $val\n";
+    }
 }
-echo "JSON_DECODE:<br>";
-var_export($decoded->RestResponse);
-echo "Nombre: ".$decoded->RestResponse;
+
 //echo "Nombre1: ".$decoded->RestResponse->result;
 //echo "Nombre2: ".$decoded->RestResponse->result->name;
 //echo "Nombre3: ".$decoded->RestResponse->name;
-echo "Nombre4: ".$decoded->RestResponse->messages;
+//echo "Nombre4: ".$decoded->RestResponse->messages;
 //echo "Nombre5: ".$decoded->messages;
 //echo "Nombre6: ".$decoded->name;
 ?>
