@@ -20,9 +20,9 @@ echo "Respuesta del servidor:<br>".$result."<br><br>";
 $jsonIterator = new RecursiveIteratorIterator(new RecursiveArrayIterator(json_decode($result, TRUE)), RecursiveIteratorIterator::SELF_FIRST);
 foreach ($jsonIterator as $key => $val) {
     if(is_array($val)) {
-        echo "$key:\n";
+        echo "$key:<br>";
     } else {
-        echo "$key => $val\n";
+        echo "$key => $val<br>";
     }
 }
 
