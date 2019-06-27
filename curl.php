@@ -7,7 +7,7 @@ curl_setopt($cSession,CURLOPT_RETURNTRANSFER,true);
 curl_setopt($cSession,CURLOPT_HEADER, false); 
 $result=curl_exec($cSession);
 curl_close($cSession);
-echo "Respuesta del servidor:<br>".$result."<br><br>";
+echo "Respuesta origen del servidor:<br>".$result."<br><br><br>";
 
 //$decoded = json_decode($result);
 //if (isset($decoded->RestResponse->status) && $decoded->RestResponse->status == 'ERROR') {
@@ -20,9 +20,9 @@ echo "Respuesta del servidor:<br>".$result."<br><br>";
 $jsonIterator = new RecursiveIteratorIterator(new RecursiveArrayIterator(json_decode($result, TRUE)), RecursiveIteratorIterator::SELF_FIRST);
 foreach ($jsonIterator as $key => $val) {
     if(is_array($val)) {
-        echo "$key:<br>";
+        echo "Key -> $key:<br><br>";
     } else {
-        echo "$key => $val<br>";
+        echo "Key: $key => Valor: $val<br>";
     }
 }
 
