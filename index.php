@@ -5,10 +5,30 @@
 	<body>
 		<script>
 			
+			function accion()
+			{
+				window.alert("Entro ACCION");
+				$.ajax({
+					type:'POST', //aqui puede ser igual get
+					url: 'funciones/mifuncion.php',//aqui va tu direccion donde esta tu funcion php
+					data: {id:1,otrovalor:'valor'},//aqui tus datos
+					success:function(data)
+					{
+						//lo que devuelve tu archivo mifuncion.php
+					},
+					error:function(data)
+					{
+						//lo que devuelve si falla tu archivo mifuncion.php
+					}
+				});
+			}
+			
 			function getOutput()
 			{
-				window.alert("Entro");
-				$.ajax({url:'myAjax.php',complete: function (response)
+				window.alert("Entro GETOUT");
+				$.ajax({
+					url:'myAjax.php',
+					complete: function (response)
 					{
 						$('#output').html(response.responseText);
 					}, error: function ()
@@ -69,6 +89,7 @@
 		</select>
 		<br>
 		<p id="Resultados"></p>
-		<input type="button" id="sample" value="click" onclick="getOutput()"/>
+		<input type="button" id="sample1" value="click1" onclick="getOutput()"/>
+		<input type="button" id="sample2" value="click2" onclick="accion()"/>
 	</body>
 </html> 
