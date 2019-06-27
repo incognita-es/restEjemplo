@@ -4,6 +4,20 @@
 	</head>
 	<body>
 		<script>
+			
+			var function getOutput()
+			{
+				$.ajax({url:'myAjax.php',complete: function (response)
+					{
+						$('#output').html(response.responseText);
+					}, error: function ()
+					{
+						$('#output').html('Bummer: there was an error!');
+					}});
+				return false;
+			}
+			
+			
 			function muestraPais(cadena)		
 			{
 				if (!soloNombre(cadena))
@@ -54,5 +68,6 @@
 		</select>
 		<br>
 		<p id="Resultados"></p>
+		<input type="button" id="sample" value="click" onclick="sam_click()"/>
 	</body>
 </html> 
