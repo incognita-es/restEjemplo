@@ -5,7 +5,7 @@
 	<body>
 		<script>
 			
-			var function getOutput()
+			function getOutput()
 			{
 				$.ajax({url:'myAjax.php',complete: function (response)
 					{
