@@ -47,6 +47,15 @@
 </script>
 	    	    
 <p><b>Comience a escribir el nombre de un pais:</b></p>
+	
+<form>
+	First name:<br>
+	<input type="text" name="firstname">
+	<br>
+	Last name:<br>
+	<input type="text" name="lastname">
+</form>
+	
 <form>Nombre: <input type="text" onkeyup="muestraPais(this.value)"></form>
 <p>Listado de paises posibles:</p>
 <select id="Listado" onchange="seleccion()"></select>
