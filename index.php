@@ -10,7 +10,7 @@
 				window.alert("Entro ACCION");
 				$.ajax({
 					type:'POST', //aqui puede ser igual get
-					url: 'funciones/mifuncion.php',//aqui va tu direccion donde esta tu funcion php
+					url: 'curl.php',//aqui va tu direccion donde esta tu funcion php
 					data: {id:1,otrovalor:'valor'},//aqui tus datos
 					success:function(data)
 					{
@@ -27,7 +27,7 @@
 			{
 				window.alert("Entro GETOUT");
 				$.ajax({
-					url:'myAjax.php',
+					url:'curl.php',
 					complete: function (response)
 					{
 						$('#output').html(response.responseText);
