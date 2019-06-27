@@ -100,7 +100,7 @@
 			Nombre: <input type="text" onkeyup="muestraPais(this.value)">
 		</form>
 		<p>Listado de paises posibles:</p>
-		<select id="Listado" onchange="seleccion()">
+		<select id="Listado" onchange="refreshData()">
 		</select>
 		<br>
 		<p id="Resultados"></p>
