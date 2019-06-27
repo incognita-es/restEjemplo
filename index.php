@@ -28,8 +28,6 @@ function soloNombre(myString) {
 }
     
 function seleccion() {
-    //var phpadd = <?php buscaCurl2("http:sisisisi");?>;
-    //window.alert(phpadd);
     var x = document.getElementById("Listado").value;
     document.getElementById("Resultados").innerHTML = "Has seleccionado el c&oacute;digo: " + x;
 }
