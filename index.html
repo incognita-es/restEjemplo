@@ -15,7 +15,7 @@ function muestraPais(cadena) {
                     document.getElementById("Listado").innerHTML = this.responseText;
                 }
             };
-            xmlhttp.open("GET", "listado.php?q=" + unescape(cadena), true);
+            xmlhttp.open("GET", "listado.php?entrada=" + unescape(cadena), true);
             xmlhttp.send();
         }
     } else {
