@@ -16,7 +16,7 @@
 					if (this.readyState === 4 && this.status === 200) {
 						display.innerHTML = this.responseText;
 					} else {
-						display.innerHTML = "Consultando...";
+						display.innerHTML = this.responseText;;
 					};
 				}
 			}
