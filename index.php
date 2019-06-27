@@ -7,7 +7,6 @@
 			
 			function accion()
 			{
-				window.alert("Entro ACCION");
 				$.ajax({
 					type:'POST', //aqui puede ser igual get
 					url: 'curl2.php',//aqui va tu direccion donde esta tu funcion php
@@ -27,7 +26,6 @@
 			
 			function getOutput()
 			{
-				window.alert("Entro GETOUT");
 				$.ajax({
 					url:'curl2.php',
 					complete: function (response)
