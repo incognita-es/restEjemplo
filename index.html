@@ -5,12 +5,9 @@
 		<script type="text/javascript">
 			function compruebaHTTPS()
 			{
-				if (location.protocol === 'https:')
+				if (location.protocol === 'http:')
 				{
-					window.alert("SIII");
-				} else 
-				{
-					window.alert("Debería usar el protocolo HTTPS");
+					window.alert("Por seguridad, debería usar el protocolo HTTPS");
 				}
 			}
 			window.onload = compruebaHTTPS;
