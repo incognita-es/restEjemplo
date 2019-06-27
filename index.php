@@ -2,17 +2,6 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
-<?php
-function ex()
-{
-$con=mysql_connect("localhost","root","");
-mysql_select_db("my_db");
-$res=mysql_query("call PrcEmployeeDisplay(777)");
-$num=mysql_num_rows($res);
-echo($num);
-}
-?>    
-
 <script type="text/javascript">
 function sam_click(clicked)
 {
@@ -56,6 +45,20 @@ function seleccion() {
     
     
     <body>
+	    
+	    <?php
+function ex()
+{
+$con=mysql_connect("localhost","root","");
+mysql_select_db("my_db");
+$res=mysql_query("call PrcEmployeeDisplay(777)");
+$num=mysql_num_rows($res);
+echo($num);
+}
+?>    
+
+	    
+	    
     <p><b>Comience a escribir el nombre de un pais:</b></p>
     <form>
         Nombre: <input type="text" onkeyup="muestraPais(this.value)">
