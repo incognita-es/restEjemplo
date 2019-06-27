@@ -34,7 +34,8 @@ function seleccion() {
 </script>
 </head>
     
-<body>
+    
+    <body>
     <p><b>Comience a escribir el nombre de un pais:</b></p>
     <form>
         Nombre: <input type="text" onkeyup="muestraPais(this.value)">
@@ -43,6 +44,8 @@ function seleccion() {
     <select id="Listado" onchange="seleccion()"></select>
     <br>
     <p id="Resultados"></p>
+    <br>
+    <button type="button" onclick="alert('Buscar en REST')">Buscar</button>
 
-</body>
+    </body>
 </html> 
