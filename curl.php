@@ -13,7 +13,7 @@ echo "Respuesta origen del servidor:<br>".$result."<br><br><br>";
 //if (isset($decoded->RestResponse->status) && $decoded->RestResponse->status == 'ERROR') {
 //    die('error occured: ' . $decoded->RestResponse->errormessage);
 //}
-//echo "JSON_DECODE:<br>";
+echo "JSON_DECODE:<br>";
 //var_export($decoded->RestResponse);
 //echo "Nombre: ".$decoded->RestResponse;
 
