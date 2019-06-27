@@ -14,6 +14,6 @@ if (isset($decoded->RestResponse->status) && $decoded->RestResponse->status == '
     die('error occured: ' . $decoded->RestResponse->errormessage);
 }
 echo "JSON_DECODE:<br>";
-var_export($decoded->RestResponse);
-echo $decoded->RestResponse->name;
+//var_export($decoded->RestResponse);
+echo "Nombre: ".$decoded->RestResponse->name;
 ?>
