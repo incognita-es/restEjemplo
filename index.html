@@ -1,6 +1,20 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Consulta REST</title>
+		<script type="text/javascript">
+			function compruebaHTTPS()
+			{
+				if (location.protocol === 'https:')
+				{
+					window.alert("SIII");
+				} else 
+				{
+					window.alert("Debería usar el protocolo HTTPS");
+				}
+			}
+			window.onload = compruebaHTTPS;
+		</script>
 	</head>
 	<body>
 		<script>
