@@ -34,7 +34,7 @@ function soloNombre(myString) {
 }
     
 function seleccion() {
-    var phpadd = <?php echo curl("http:sisisisi");?>
+    var phpadd = <?php echo curl("http:sisisisi");?>;
     window.alert(phpadd);
     var x = document.getElementById("Listado").value;
     document.getElementById("Resultados").innerHTML = "Has seleccionado el c&oacute;digo: " + x;
