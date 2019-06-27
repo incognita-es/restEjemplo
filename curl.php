@@ -7,13 +7,13 @@ curl_setopt($cSession,CURLOPT_RETURNTRANSFER,true);
 curl_setopt($cSession,CURLOPT_HEADER, false); 
 $result=curl_exec($cSession);
 curl_close($cSession);
-echo $result;
+echo "Respuesta del servicio".$result."<br><br>";
 
 $decoded = json_decode($result);
 if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
     die('error occured: ' . $decoded->response->errormessage);
 }
-echo "Respuesta correcta<br>";
+echo "Respuesta correcta<br><br>";
 var_export($decoded->RestResponse);
 echo $decoded->RestResponse;
 ?>
