@@ -1,6 +1,26 @@
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+<?php
+function ex()
+{
+$con=mysql_connect("localhost","root","");
+mysql_select_db("my_db");
+$res=mysql_query("call PrcEmployeeDisplay(777)");
+$num=mysql_num_rows($res);
+echo($num);
+}
+?>    
+
+<script type="text/javascript">
+function sam_click(clicked)
+{
+	var x="<?php ex(); ?>";
+	alert(x);
+	return false;
+}
+</script>
     
 <script>
 function muestraPais(cadena) {
@@ -45,16 +65,6 @@ function seleccion() {
     <br>
     <p id="Resultados"></p>
     <br>
-    <button type="button" onclick="alert('Buscar en REST')">Buscar</button>
-        $('.button').click(function() {
-
-    $.ajax({
-        type: "POST",
-        url: "some.php",
-        data: { name: "John" }
-        }).done(function( msg ) {
-        alert( "Data Saved: " + msg );
-        });    
-    });
+    <input type="button" id="sample" value="click" onclick="sam_click()"/>
 
 </body></html> 
