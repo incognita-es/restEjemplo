@@ -2,42 +2,42 @@
 header('Content-Type: text/html; charset=UTF-8');
 
 // Array de paises
-$a[] = "And>Andorra";
-$a[] = "Alb>Albania";
-$a[] = "Deu>Alemania";
-$a[] = "Bel>Bélgica";
-$a[] = "Brb>Barbados";
-$a[] = "Cze>Chequia";
-$a[] = "Chl>Chile";
-$a[] = "Dnk>Dinamarca";
-$a[] = "Esp>España";
-$a[] = "Ecu>Ecuador";
-$a[] = "Est>Estonia";
-$a[] = "Svn>Eslovenia";
-$a[] = "Fin>Finlandia";
-$a[] = "Geo>Georgia";
-$a[] = "GBR>Reino Unido";
-$a[] = "Hun>Hungría";
-$a[] = "Ita>Italia";
-$a[] = "Irl>Irlanda";
-$a[] = "Isl>Islandia";
-$a[] = "Jpn>Japón";
-$a[] = "Kaz>Kazajistán";
-$a[] = "Ltu>Lituania";
-$a[] = "Lux>Luxemburgo";
-$a[] = "Mlt>Malta";
-$a[] = "Mng>Mongolia";
-$a[] = "Nor>Noruega";
-$a[] = "Prt>Portugal";
-$a[] = "rus>Rusia";
-$a[] = "Wsm>Samoa";
-$a[] = "Swe>Suecia";
-$a[] = "Che>Suiza";
-$a[] = "Tha>Tailandia";
-$a[] = "Ury>Uruguay";
-$a[] = "Ury>Uruguay";
-$a[] = "Yem>Yemen";
-$a[] = "Zmb>Zambia";
+$listaPaises[] = "And>Andorra";
+$listaPaises[] = "Alb>Albania";
+$listaPaises[] = "Deu>Alemania";
+$listaPaises[] = "Bel>Bélgica";
+$listaPaises[] = "Brb>Barbados";
+$listaPaises[] = "Cze>Chequia";
+$listaPaises[] = "Chl>Chile";
+$listaPaises[] = "Dnk>Dinamarca";
+$listaPaises[] = "Esp>España";
+$listaPaises[] = "Ecu>Ecuador";
+$listaPaises[] = "Est>Estonia";
+$listaPaises[] = "Svn>Eslovenia";
+$listaPaises[] = "Fin>Finlandia";
+$listaPaises[] = "Geo>Georgia";
+$listaPaises[] = "GBR>Reino Unido";
+$listaPaises[] = "Hun>Hungría";
+$listaPaises[] = "Ita>Italia";
+$listaPaises[] = "Irl>Irlanda";
+$listaPaises[] = "Isl>Islandia";
+$listaPaises[] = "Jpn>Japón";
+$listaPaises[] = "Kaz>Kazajistán";
+$listaPaises[] = "Ltu>Lituania";
+$listaPaises[] = "Lux>Luxemburgo";
+$listaPaises[] = "Mlt>Malta";
+$listaPaises[] = "Mng>Mongolia";
+$listaPaises[] = "Nor>Noruega";
+$listaPaises[] = "Prt>Portugal";
+$listaPaises[] = "rus>Rusia";
+$listaPaises[] = "Wsm>Samoa";
+$listaPaises[] = "Swe>Suecia";
+$listaPaises[] = "Che>Suiza";
+$listaPaises[] = "Tha>Tailandia";
+$listaPaises[] = "Ury>Uruguay";
+$listaPaises[] = "Ury>Uruguay";
+$listaPaises[] = "Yem>Yemen";
+$listaPaises[] = "Zmb>Zambia";
 
 //Leemos la entrada del pais
 $entrada = $_REQUEST["entrada"];
@@ -47,12 +47,12 @@ $hint = "";
 if ($entrada !== ""){
     $entrada = strtolower($entrada);
     $len=strlen($entrada);
-    foreach($a as $name){
+    foreach($listaPaises as $name){
         if (stristr($entrada, substr($name, 4, $len))){
             if ($hint === ""){
                 $hint = "<option value=0 selected>Seleccione un pais</option><option value=".$name."</option>";
             } else {
-                $hint .= "<option value=".$name.utf8_decode($q)."</option>";
+                $hint .= "<option value=".$name.utf8_decode($entrada)."</option>";
             }
         }
     }
