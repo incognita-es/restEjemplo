@@ -23,6 +23,11 @@ foreach($array as $key=>$value)
     echo "Salida: ".$key . "=>" . $value . "<br>";
 }
 
+//$array = json_decode($result, true);
+foreach ($array as $emp) {
+  echo $emp['Name']."<br/>";
+}
+
 
 $jsonIterator = new RecursiveIteratorIterator(new RecursiveArrayIterator(json_decode($result, TRUE)), RecursiveIteratorIterator::SELF_FIRST);
 foreach ($jsonIterator as $key => $val) {
