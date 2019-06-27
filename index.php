@@ -1,15 +1,6 @@
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-
-<script type="text/javascript">
-function sam_click(clicked)
-{
-	var x="<?php ex(); ?>";
-	alert(x);
-	return false;
-}
-</script>
     
 <script>
 function muestraPais(cadena) {
@@ -40,34 +31,16 @@ function seleccion() {
     var x = document.getElementById("Listado").value;
     document.getElementById("Resultados").innerHTML = "Has seleccionado el c&oacute;digo: " + x;
 }
-</script>
-</head>
-    
-    
-    <body>
+</script></head>
+<body>
 	    
-	    <?php
-function ex()
-{
-$con=mysql_connect("localhost","root","");
-mysql_select_db("my_db");
-$res=mysql_query("call PrcEmployeeDisplay(777)");
-$num=mysql_num_rows($res);
-echo($num);
-}
-?>    
-
-	    
-	    
-    <p><b>Comience a escribir el nombre de un pais:</b></p>
-    <form>
-        Nombre: <input type="text" onkeyup="muestraPais(this.value)">
-    </form>
-    <p>Listado de paises posibles:</p>
-    <select id="Listado" onchange="seleccion()"></select>
-    <br>
-    <p id="Resultados"></p>
-    <br>
-    <input type="button" id="sample" value="click" onclick="sam_click()"/>
-
+	    	    
+<p><b>Comience a escribir el nombre de un pais:</b></p>
+<form>Nombre: <input type="text" onkeyup="muestraPais(this.value)"></form>
+<p>Listado de paises posibles:</p>
+<select id="Listado" onchange="seleccion()"></select>
+<br>
+<p id="Resultados"></p>
+<br>
+<input type="button" id="sample" value="click" onclick="sam_click()"/>
 </body></html> 
