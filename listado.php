@@ -41,7 +41,7 @@ $listaPaises[] = "Zmb>Zambia";
 
 //Leemos la entrada del pais
 $entrada = $_REQUEST["entrada"];
-$hint = "";
+$resultado = "";
 
 // Buscamos la entrada dentro del array
 if ($entrada !== ""){
@@ -49,16 +49,16 @@ if ($entrada !== ""){
     $len=strlen($entrada);
     foreach($listaPaises as $name){
         if (stristr($entrada, substr($name, 4, $len))){
-            if ($hint === ""){
-                $hint = "<option value=0 selected>Seleccione un pais</option><option value=".$name."</option>";
+            if ($resultado === ""){
+                $resultado = "<option value=0 selected>Seleccione un pais</option><option value=".$name."</option>";
             } else {
-                $hint .= "<option value=".$name.utf8_decode($entrada)."</option>";
+                $resultado .= "<option value=".$name.utf8_decode($entrada)."</option>";
             }
         }
     }
 }
 
-// Output "no suggestion" if no hint was found or output correct values
-echo $hint === "" ? "<option value=0 selected>".$entrada.", No coincide con ning&uacute;n pais configurado.</option>" : $hint;
+// Si no existe un pais que coincida en la lista, se indica.
+echo $resultado === "" ? "<option value=0 selected>".$entrada.", No coincide con ning&uacute;n pais configurado.</option>" : $resultado;
 
 ?> 
